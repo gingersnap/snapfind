@@ -13,6 +13,7 @@
     "express": "*",
     "express-handlebars": "",
     "express-locale": "*",
-    "googleapis": "*"
+    "googleapis": "*",
+    "redis": "*"
   }
 }
