@@ -1,0 +1,49 @@
+<nav>
+	<div class="navbar">
+		<div style="max-width: 1240px;margin:0px auto">
+			<form action="/" method="get" style="display:inline">
+				<input style="display:inline;padding:5px" type="text" id="q" name="q" value="{{queries.request.[0].searchTerms}}" placeholder="What do you want to find?" size=30>
+				<!-- <input style="display:inline" type="checkbox" id="raw" name="raw"> -->
+
+			</form> 
+			<a href="/" class="brand" style="float: right;display:inline">
+				SnapFind
+			</a>
+
+		</div>
+
+	</div>
+</nav>
+
+
+
+<div style="max-width: 1240px;margin:0px auto">
+
+	<div style="max-width:600px;float:left">
+		{{#each items}}
+		<article style="margin-bottom:40px;">
+			<a href="{{this.link}}">
+				<h3 class="search-title">{{this.title}}</h3>
+				<p class="search-link">{{this.displayLink}}</p>
+			</a>
+			<p class="search-text">{{this.snippet}}</p>
+			{{!-- <img src="{{this.pagemap.cse_thumbnail.[0].src}}"> --}}
+		</article>
+		{{/each}}
+		<p>Searchterm:<em>{{queries.request.[0].searchTerms}}</em>, Languge:<em>{{queries.request.[0].hl}}</em>, Country:<em>{{queries.request.[0].gl}}</em></p>
+	</div>
+
+	<div style="max-width:600px;width:100%;float: right;">
+
+		<button style="display:block" id="showMap">Show Map (not private)</button>
+		<div id="mapdiv" class="hidden">
+			<iframe id="map"
+			width="600"
+			height="450"
+			style="border:0"
+			loading="lazy"
+			allowfullscreen
+			data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPlaF3moc58R3VxA3oFnnPEWaBgDkwIxs&q={{queries.request.[0].searchTerms}}">
+		</iframe>
+	</div>
+</div>

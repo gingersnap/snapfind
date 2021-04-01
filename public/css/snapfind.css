@@ -1,0 +1,25 @@
+.search-title{
+	font-family:Noto Sans;
+	margin-top:0px;
+	margin-bottom:2px;
+
+}
+
+.search-text{
+	font-family:Noto Sans;
+	margin-top:0px;
+	margin-bottom:2px;
+	font-size:1em;
+	line-height:1.4;
+}
+
+.search-link{
+	font-family:Noto Sans;
+	font-style:italic;
+	color:grey;
+	font-size:0.9em;
+	line-height:1.4;
+	margin-top:0px;
+	margin-bottom:2px;
+
+}

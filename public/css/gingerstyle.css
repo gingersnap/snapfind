@@ -1,0 +1,163 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+
+body{
+	background-color:#fafafa;
+	color:#333;
+	margin-top:80px;
+}
+p{
+	font-family: Noto Serif;
+	font-size: 1.2em;
+	line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Ubuntu;
+
+}
+.brand{
+	color:#e60;
+	font-family:Noto Serif;
+	font-weight:normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+blockquote{
+	font-size:28px;
+	font-style: italic;
+	border-left:10px #888 solid;
+	padding-left:20px;
+	margin: 30px 20px 20px 0px;
+	font-family: Ubuntu;
+}
+
+
+nav{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-size: 22px;
+}
+.navbar{
+	background-color:#fff;
+	height:50px;
+	border-bottom: 1px #ddd solid;
+	padding:6px;
+	width:100%;
+	box-shadow: 0 4px 4px -2px rgba(0,0,0,.2);
+}
+a.nav{
+	color:#333;
+	text-decoration: none;
+}
+a.nav:hover{
+	color:#aaa;
+	text-decoration: none;
+}
+
+a{
+	text-decoration:none;
+}
+
+.hidden{
+	display:none;
+}
+
+.title{
+font-size:3em;
+}
+
+/* Main Div */
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+
+.narrow-container{
+	max-width: 660px;
+	margin: 0 auto;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+[class*="col-"] {
+	float: left;
+	padding: 15px;
+}
+
+@media only screen and (max-width: 760px) {
+	/* For mobile phones: */
+	[class*="col-"] {
+		width: 100%;
+	}
+	.col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {width: 50%;}
+	.col-7, .col-8 {width: 66.66%;}
+	.col-9, .col-10 {width: 83.33%;}
+	.col-11, .col-12 {width: 100%;}
+	
+}
+
+.pull-right{
+	float: right;
+
+}
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.white-box{
+	background-color:#fff;
+	border:1px solid #ddd;
+	border-radius:6px;
+}
+
+img{
+	max-width:100%;
+	height:auto;
+}
+
+hr {
+	border-color: #888;
+	border-style: solid none;
+	border-width: 1px 0px 0px 0px;
+	margin: 18px 0px;
+}
+
+button{
+	background-color:#38c;
+	color:#fff;
+	border:none;
+	padding:10px;
+	border-radius:10px;
+	cursor: pointer;
+}
+button:hover{
+	background-color:#16a;
+}
+button:focus{
+	outline: none;
+}
