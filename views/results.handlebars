@@ -2,7 +2,7 @@
 	<div class="navbar">
 		<div style="max-width: 1240px;margin:0px auto">
 			<form action="/" method="get" style="display:inline">
-				<input style="display:inline;padding:5px" type="text" id="q" name="q" value="{{queries.request.[0].searchTerms}}" placeholder="What do you want to find?" size=30>
+				<input style="display:inline;padding:5px" type="text" id="q" name="q" value="{{q}}" placeholder="What do you want to find?" size=30>
 				<!-- <input style="display:inline" type="checkbox" id="raw" name="raw"> -->
 
 			</form> 
@@ -30,7 +30,7 @@
 			{{!-- <img src="{{this.pagemap.cse_thumbnail.[0].src}}"> --}}
 		</article>
 		{{/each}}
-		<p>Searchterm:<em>{{queries.request.[0].searchTerms}}</em>, Languge:<em>{{queries.request.[0].hl}}</em>, Country:<em>{{queries.request.[0].gl}}</em></p>
+		<p>Searchterm:<em>{{q}}</em>, Languge:<em>{{queries.request.[0].hl}}</em>, Country:<em>{{queries.request.[0].gl}}</em></p>
 	</div>
 
 	<div style="max-width:600px;width:100%;float: right;">
@@ -43,7 +43,7 @@
 			style="border:0"
 			loading="lazy"
 			allowfullscreen
-			data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPlaF3moc58R3VxA3oFnnPEWaBgDkwIxs&q={{queries.request.[0].searchTerms}}">
+			data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPlaF3moc58R3VxA3oFnnPEWaBgDkwIxs&q={{q}}">
 		</iframe>
 	</div>
 </div>

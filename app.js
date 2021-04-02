@@ -30,10 +30,12 @@ app.get('/', (req, res, next) => {
 		var q_array=q.toLowerCase().split(" ");
 		q_array.sort();
 		var q_cache=q_array.join(" ");
-		console.log(q_cache);
 		client.get(q_cache,function(err,reply){
 			if (reply){
-				res.render("results",JSON.parse(reply));
+				reply=JSON.parse(reply)
+				reply.q=q;
+				console.log(reply.q);
+				res.render("results",reply);
 				console.log("Cache");
 			}else{
 				var search_options={
@@ -52,6 +54,8 @@ app.get('/', (req, res, next) => {
 						res.json(gres.data);
 
 					}else{
+						gres.data.q=q;
+						console.log(gres.data.q);
 						res.render("results",gres.data);
 						client.set(q_cache, JSON.stringify(gres.data));
 						console.log("Unique");
