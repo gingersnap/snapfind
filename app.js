@@ -27,7 +27,11 @@ app.set('view engine', 'handlebars');
 app.get('/', (req, res, next) => {
 	const { q, raw } = req.query;
 	if (q){
-		client.get(q.toLowerCase(),function(err,reply){
+		var q_array=q.toLowerCase().split(" ");
+		q_array.sort();
+		var q_cache=q_array.join(" ");
+		console.log(q_cache);
+		client.get(q_cache,function(err,reply){
 			if (reply){
 				res.render("results",JSON.parse(reply));
 				console.log("Cache");
@@ -49,7 +53,7 @@ app.get('/', (req, res, next) => {
 
 					}else{
 						res.render("results",gres.data);
-						client.set(q.toLowerCase(), JSON.stringify(gres.data));
+						client.set(q_cache, JSON.stringify(gres.data));
 						console.log("Unique");
 					}
 				});
@@ -66,5 +70,11 @@ app.get('/', (req, res, next) => {
 
 });
 
+app.get('/flushredis', (req, res, next) => {
+	client.flushall( function (err, succeeded) {
+		res.send("Result of flushall "+succeeded)
+	});
+
+});
 app.listen(port, function(){console.log("Listening on port:"+port)});
 
