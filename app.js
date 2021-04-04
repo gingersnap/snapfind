@@ -73,7 +73,7 @@ app.get('/', (req, res, next) => {
 					if (err) throw err;
 
 					console.log(JSON.stringify(res));
-					pg_client.end();
+
 				});
 
 			}else{
@@ -103,7 +103,7 @@ app.get('/', (req, res, next) => {
 							if (err) throw err;
 							
 							console.log(JSON.stringify(res));
-							pg_client.end();
+							
 						});
 
 					}
