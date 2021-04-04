@@ -1,1 +1,2 @@
-export $(xargs < .env)
+#!/bin/bash
+set -a; source .env; set +a
