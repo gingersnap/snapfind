@@ -44,7 +44,13 @@ nav{
 	left: 0;
 	right: 0;
 	top: 0;
-	font-size: 22px;
+}
+nav span{
+	font-size: 1.4em;
+
+}
+nav input{
+	font-size:1.2em;
 }
 .navbar{
 	background-color:#fff;
@@ -72,7 +78,7 @@ a{
 }
 
 .title{
-font-size:3em;
+	font-size:3em;
 }
 
 /* Main Div */

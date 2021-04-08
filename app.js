@@ -1,3 +1,5 @@
+"use strict";
+
 const { google } = require('googleapis');
 const customsearch = google.customsearch('v1');
 
@@ -20,17 +22,6 @@ const pg_client = new pg({
 });
 
 pg_client.connect();
-
-/*
-pg_client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
-  if (err) throw err;
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row));
-  }
-  client.end();
-});
-
-*/
 
 const redis_client = redis.createClient(process.env.REDIS_URL, {
 	tls: {
@@ -127,5 +118,6 @@ app.get('/flushredis', (req, res, next) => {
 	});
 
 });
+
 app.listen(port, function(){console.log("Listening on port:"+port)});
 
