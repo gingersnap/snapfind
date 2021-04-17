@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Poppin');
 
 
 body{
@@ -11,16 +12,18 @@ body{
 }
 p{
 	font-family: Noto Serif;
-	font-size: 1.2em;
-	line-height: 1.6;
+	font-size: 1em;
+	line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: Ubuntu;
 
 }
+
+
 .brand{
-	color:#e60;
+	color:#f84;
 	font-family:Noto Serif;
 	font-weight:normal;
 }
@@ -72,6 +75,7 @@ a.nav:hover{
 a{
 	text-decoration:none;
 }
+
 
 .hidden{
 	display:none;

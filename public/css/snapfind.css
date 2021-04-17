@@ -2,7 +2,26 @@
 	font-family:Noto Sans;
 	margin-top:0px;
 	margin-bottom:2px;
+	font-weight:normal;
+}
 
+a:link h3.search-title{
+color:#04c;
+}
+
+a:visited h3.search-title{
+  color: #80c;
+}
+
+a.mainpage-link{
+	color:#04c;
+
+}
+input{
+border: 1px solid #ced4da;
+box-shadow: 0 2px 3px rgba(0,0,0,0.06);
+appearance: none;
+border-radius: .25rem;
 }
 
 .search-text{
@@ -13,9 +32,9 @@
 	line-height:1.4;
 }
 
-.search-link{
+.search-url{
 	font-family:Noto Sans;
-	font-style:italic;
+	font-style:none;
 	color:grey;
 	font-size:0.9em;
 	line-height:1.4;
